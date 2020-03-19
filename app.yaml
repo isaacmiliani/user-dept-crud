@@ -1,0 +1,27 @@
+runtime: php
+env: flex
+
+runtime_config:
+  document_root: public
+
+env_variables:
+  # Put production environment variables here.
+  APP_LOG: errorlog
+  APP_KEY: base64:crRvtujDBpby9b76F4Pnp+I+63+y7mbWiLuFnZM6UZo=
+  CACHE_DRIVER: file
+  SESSION_DRIVER: cookie
+  APP_STORAGE: /tmp
+  VIEW_COMPILED_PATH: /tmp
+  ## Set these environment variables according to your CloudSQL configuration.
+  DB_CONNECTION: mysql
+  DB_HOST: 127.0.0.1
+  DB_PORT: 3306
+  DB_DATABASE: laraval
+  DB_USERNAME: root
+  DB_PASSWORD: admin
+  DB_SOCKET: "/cloudsql/clever-environs-239113:europe-west1:instance-mysql"
+
+beta_settings:
+  # for Cloud SQL, set this value to the Cloud SQL connection name,
+  # e.g. "project:region:cloudsql-instance"
+  cloud_sql_instances: "clever-environs-239113:europe-west1:instance-mysql"
